@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-text-input',
   templateUrl: './text-input.component.html',
@@ -11,5 +12,10 @@ export class TextInputComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  onSubmit():void{
+    console.log('sent!')
+  }
+  
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-display-window',
@@ -6,17 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./display-window.component.scss']
 })
 export class DisplayWindowComponent implements OnInit {
+  @Input() getTextTime: string | undefined;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  getTextTime() {
-    const ojd = new Date();
-    const ojdDate = ojd.getDate()+'/'+(ojd.getMonth()+1)+'/'+ojd.getFullYear();
-    const ojdTime = ojd.getHours()+'h'+ojd.getMinutes()+'m'+ojd.getSeconds()+'s';
-    return ojdDate + ' ' + ojdTime;
-  }
+  
 
 }

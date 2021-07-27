@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-send-button',
@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SendButtonComponent implements OnInit {
 
-  sendText = "Send!";
+  sendText:string = "Send!";
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  
+  @Input() onSubmit: void;
 
 }

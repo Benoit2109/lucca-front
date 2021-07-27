@@ -1,1 +1,6 @@
-<input type="text">
+<form>
+    <label for="text">Saisissez votre text:</label>
+    <input type="text" name="text"/>
+    <app-send-button [onSubmit]="onSubmit()"></app-send-button>
+</form>
+
