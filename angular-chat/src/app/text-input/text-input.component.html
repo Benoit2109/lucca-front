@@ -1,6 +1,9 @@
-<form>
-    <label for="text">Saisissez votre text:</label>
-    <input type="text" name="text"/>
+<form class="input_container" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="text">Saisissez votre text:</label>
+        <input class="input_area" type="text" name="text" [(ngModel)]="current"/>
+    </div>
+    
     <app-send-button [onSubmit]="onSubmit()"></app-send-button>
 </form>
 

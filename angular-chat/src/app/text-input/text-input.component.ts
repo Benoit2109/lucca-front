@@ -8,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TextInputComponent implements OnInit {
 
-  constructor() { }
+  current:string;
+
+  constructor() { 
+    this.current="";
+  }
 
   ngOnInit(): void {
   }
@@ -19,3 +23,6 @@ export class TextInputComponent implements OnInit {
   
 
 }
+
+
+

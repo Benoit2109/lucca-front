@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Message } from './chat/message.model';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  messages:Message[]=[];
+  
   constructor(){
 
   }

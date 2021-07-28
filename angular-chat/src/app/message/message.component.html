@@ -1,0 +1,7 @@
+<li class="message_container">
+    <div class="message_header">
+        <p class="message_pseudo" [ngStyle]="{color:getColor()}">{{pseudo}}</p>
+        <p>{{postedAt | date:"short"}}</p>
+    </div>
+    <p class="message_corps">{{message}}</p>
+</li>

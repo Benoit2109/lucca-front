@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./display-window.component.scss']
 })
 export class DisplayWindowComponent implements OnInit {
-  @Input() getTextTime: string | undefined;
+  
 
   constructor() { }
 

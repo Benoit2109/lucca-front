@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,Input, OnInit } from '@angular/core';
+import { Message } from './message.model';
 
 @Component({
   selector: 'app-chat',
@@ -7,17 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatComponent implements OnInit {
 
+  @Input()messages: Message[];
+  current:string;
 
-  constructor() { }
+  constructor() { 
+    this.messages=[];
+    this.current="";
+  }
 
   ngOnInit(): void {
   }
 
-  getTextTime():string {
-    const ojd = new Date();
-    const ojdDate = ojd.getDate()+'/'+(ojd.getMonth()+1)+'/'+ojd.getFullYear();
-    const ojdTime = ojd.getHours()+'h'+ojd.getMinutes()+'m'+ojd.getSeconds()+'s';
-    return ojdDate + ' ' + ojdTime;
-  }
+  
+  
 
 }
