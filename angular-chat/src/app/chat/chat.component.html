@@ -1,7 +1,11 @@
 <div>
-    <app-display-window ></app-display-window>
+    <ul>
+        <li *ngFor="let message of messages">{{message.message}}</li>
+    </ul>
+    
     <div>
-        <app-text-input></app-text-input>
+        <input type="text" [(ngModel)]="current"/>
+        <button type="button" (click)="onClick()">Send!</button>
     </div>
     
 </div>

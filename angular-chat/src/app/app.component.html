@@ -23,8 +23,8 @@
 
 
   <div class="app_container">
-    <app-chat [messages]="messages"></app-chat>
-    <app-chat [messages]="messages"></app-chat>
+    <app-chat [messages]="messages" (submit)="onSubmit($event)"></app-chat>
+    <app-chat [messages]="messages" (submit)="onSubmit($event)"></app-chat>
   </div>
   
   

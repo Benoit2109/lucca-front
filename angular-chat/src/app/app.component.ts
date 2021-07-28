@@ -8,10 +8,14 @@ import { Message } from './chat/message.model';
 })
 export class AppComponent {
 
-  messages:Message[]=[];
+  messages:Message[]=[{pseudo:"Ben",date:new Date(),message:"coucou"},{pseudo:"FX",date:new Date(),message:"salut!"}];
   
   constructor(){
 
+  }
+
+  onSubmit=(message:Message)=>{
+    this.messages.push(message);
   }
   
 }
