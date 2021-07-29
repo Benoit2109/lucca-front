@@ -8,10 +8,18 @@ import { Message } from './chat/message.model';
 })
 export class AppComponent {
 
-  messages:Message[]=[{pseudo:"Ben",date:new Date(),message:"coucou"},{pseudo:"FX",date:new Date(),message:"salut!"}];
+  messages:Message[]=[
+    {pseudo:"Ben",date:new Date(),message:"Bonjour Francçois-Xavier"},{pseudo:"François-Xavier",date:new Date(),message:"Bonjour Benoit, Comment ça va?"},
+    {pseudo:"Ben",date:new Date(),message:"Très bien, merci. Avez-vous regardé mon test?"},{pseudo:"François-Xavier",date:new Date(),message:"Oui, certaines choses sont à revoir mais ce sera le but de notre accompagnement pendant ton alternance. Bienvenu chez Lucca!"},
+
+  ];
+
+  pseudo1:string="Ben";
+  pseudo2:string="François-Xavier";
+  
   
   constructor(){
-
+    
   }
 
   onSubmit=(message:Message)=>{

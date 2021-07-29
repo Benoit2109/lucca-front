@@ -9,20 +9,22 @@ import { Message } from './message.model';
 export class ChatComponent implements OnInit {
 
   @Input()messages: Message[];
-  @Output() submit = new EventEmitter<Message>();
+  @Output()submit = new EventEmitter<Message>();
   current:string;
+  @Input()pseudo:string;
+  
 
   constructor() { 
     this.messages=[];
     this.current="";
-    
+    this.pseudo="";
   }
 
   ngOnInit(): void {
   }
 
   onClick() {
-    this.submit.emit({pseudo:"Ben",date:new Date(),message:this.current});
+    this.submit.emit({pseudo:this.pseudo,date:new Date(),message:this.current});
     this.current="";
   }
   

@@ -1,7 +1,22 @@
 .app_container{
     width:100%;
     height: 1000px;
+    
+    background-color: orange;
+}
+
+.app_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20%;
+}
+
+.app_title{
+    color: white;
+}
+
+.app_messenger{
     display: flex;
     justify-content: center;
-    background-color: orange;
 }

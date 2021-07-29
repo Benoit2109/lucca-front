@@ -1,11 +1,14 @@
-<div>
-    <ul>
-        <li *ngFor="let message of messages">{{message.message}}</li>
-    </ul>
+<div class="chat_container">
+    <div class="chat_window">
+        <ul>
+            <app-message [messages]="messages" [pseudo]="pseudo"></app-message>
+        </ul>
+    </div>
+    
     
     <div>
-        <input type="text" [(ngModel)]="current"/>
-        <button type="button" (click)="onClick()">Send!</button>
+        <input class="chat_input" type="text" [(ngModel)]="current"/>
+        <button class="chat_button" type="button" (click)="onClick()">Send!</button>
     </div>
     
 </div>

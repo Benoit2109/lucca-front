@@ -1,4 +1,5 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import {Message} from '../chat/message.model';
 
 @Component({
   selector: 'app-message',
@@ -7,21 +8,25 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class MessageComponent implements OnInit {
   postedAt= new Date();
-  pseudo:string="Benoit";
-  message:string="Bonjour comment ça va?"
+  
+  @Input()messages:Message[];
+  @Input()pseudo:string;
 
   constructor() {
-    
+    this.messages=[]
+    this.pseudo="";
    }
 
   ngOnInit(): void {
   }
 
-  getColor() {
-    if(this.pseudo === "Benoit"){
-      return "red";
+  getPseudoColor(pseudo:string) {
+    if(pseudo==="Ben"){
+      return "#f8521b";
+    } else if(pseudo==="François-Xavier"){
+      return "#F8DB1B";
     } else {
-      return "green";
+      return "#F4E66F";
     }
   }
   

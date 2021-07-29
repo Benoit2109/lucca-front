@@ -1,7 +1,9 @@
-<li class="message_container">
-    <div class="message_header">
-        <p class="message_pseudo" [ngStyle]="{color:getColor()}">{{pseudo}}</p>
-        <p>{{postedAt | date:"short"}}</p>
+<li *ngFor="let message of messages">
+    <div class="message_container">
+        <div [ngStyle]="{color: getPseudoColor(message.pseudo)}"  class="message_header">
+            <p class="message_pseudo" >{{message.pseudo}}</p>
+            <p>{{message.date | date:"short"}}</p>
+        </div>
+        <p class="message_corps">{{message.message}}</p>
     </div>
-    <p class="message_corps">{{message}}</p>
 </li>
