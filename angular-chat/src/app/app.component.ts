@@ -9,7 +9,7 @@ import { Message } from './chat/message.model';
 export class AppComponent {
 
   messages:Message[]=[
-    {pseudo:"Ben",date:new Date(),message:"Bonjour Francçois-Xavier"},{pseudo:"François-Xavier",date:new Date(),message:"Bonjour Benoit, Comment ça va?"},
+    {pseudo:"Ben",date:new Date(),message:"Bonjour François-Xavier"},{pseudo:"François-Xavier",date:new Date(),message:"Bonjour Benoit, Comment ça va?"},
     {pseudo:"Ben",date:new Date(),message:"Très bien, merci. Avez-vous regardé mon test?"},{pseudo:"François-Xavier",date:new Date(),message:"Oui, certaines choses sont à revoir mais ce sera le but de notre accompagnement pendant ton alternance. Bienvenu chez Lucca!"},
 
   ];
