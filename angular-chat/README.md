@@ -15,7 +15,7 @@ Clone the project
 Go to the project directory
 
 ```bash
-  cd lucca-front
+  cd test-front-lucca/angular-chat
 ```
 
 Install dependencies
